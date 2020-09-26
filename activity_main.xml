@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/heading_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/heading_text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#101010"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/group_selected_spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heading_tv" />
+
+    <Button
+        android:id="@+id/button_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:onClick="defaultSelected"
+        android:text="Default"
+        app:layout_constraintStart_toStartOf="@+id/group_selected_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/group_selected_spinner" />
+
+    <Button
+        android:id="@+id/monday_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:onClick="mondaySelected"
+        android:text="Monday"
+        app:layout_constraintEnd_toEndOf="@+id/group_selected_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/group_selected_spinner" />
+
+    <Button
+        android:id="@+id/tuesday_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="tuesdaySelected"
+        android:text="Tuesday"
+        app:layout_constraintStart_toStartOf="@+id/group_selected_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/button_default" />
+
+    <Button
+        android:id="@+id/wednesday_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="wednesdaySelected"
+        android:text="Wednesday"
+        app:layout_constraintEnd_toEndOf="@+id/group_selected_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/monday_button" />
+
+    <Button
+        android:id="@+id/thursday_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="thursdaySelected"
+        android:text="Thursday"
+        app:layout_constraintStart_toStartOf="@+id/group_selected_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/tuesday_button" />
+
+    <Button
+        android:id="@+id/friday_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="fridaySelected"
+        android:text="Friday"
+        app:layout_constraintEnd_toEndOf="@+id/group_selected_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/wednesday_button" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/timetable_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/group_selected_spinner"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/group_selected_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/day_display_tv" />
+
+    <TextView
+        android:id="@+id/day_display_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Default"
+        android:textColor="#0E0E0E"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/group_selected_spinner"
+        app:layout_constraintStart_toStartOf="@+id/group_selected_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/thursday_button" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

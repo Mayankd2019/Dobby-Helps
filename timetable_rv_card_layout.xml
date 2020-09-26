@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    app:cardCornerRadius="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/class_start_time_tv"
+            android:layout_width="102dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="#0C0C0C"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/class_end_time_tv"
+            android:layout_width="102dp"
+            android:layout_height="33dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="#0E0E0E"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/subject_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="TextView"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintEnd_toStartOf="@+id/class_end_time_tv"
+            app:layout_constraintStart_toEndOf="@+id/class_start_time_tv"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/link_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/meet_link"
+            android:autoLink="web"
+            android:linksClickable="true"
+            app:layout_constraintEnd_toEndOf="@+id/class_end_time_tv"
+            app:layout_constraintStart_toStartOf="@+id/class_start_time_tv"
+            app:layout_constraintTop_toBottomOf="@+id/subject_tv" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="28dp"
+            android:background="#0E0E0E"
+            app:layout_constraintEnd_toEndOf="@+id/class_end_time_tv"
+            app:layout_constraintStart_toStartOf="@+id/class_start_time_tv"
+            app:layout_constraintTop_toBottomOf="@+id/link_tv" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
